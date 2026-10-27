@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Rogue AP Detection System</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>ROGUE AP DETECTION SYSTEM</h1>
+
+        <div class="status-card">
+
+            <h2>NETWORK SECURITY STATUS</h2>
+
+            <p id="security-status">SECURE</p>
+
+        </div>
+
+        <div class="stats">
+
+            <div class="card">
+                <h3>SAFE APS</h3>
+                <p id="safe-count">0</p>
+            </div>
+
+            <div class="card">
+                <h3>ROGUE APS</h3>
+                <p id="rogue-count">0</p>
+            </div>
+
+        </div>
+
+        <button onclick="scanNetworks()">
+            Scan Networks
+        </button>
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>SSID</th>
+                    <th>BSSID</th>
+                    <th>Signal</th>
+                    <th>Encryption</th>
+                    <th>Status</th>
+                    <th>Threat</th>
+                </tr>
+
+            </thead>
+
+            <tbody id="table-body">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <script
+        src="{{ url_for('static', filename='script.js') }}"
+    ></script>
+
+</body>
+
+</html>
